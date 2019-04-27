@@ -5,9 +5,17 @@ env:
   - FORMULA=rvm
   - FORMULA=not-yet-created
 
-before_install:
-  - brew update >/dev/null
-script:
-  - brew install -v ./Formula/$FORMULA.rb
-  - brew test ./Formula/$FORMULA.rb
-  - brew audit ./Formula/$FORMULA.rb
+
+jobs:
+  include:
+  - stage: Install
+    before_install:
+      - brew update >/dev/null
+    script:
+      - brew install -v ./Formula/$FORMULA.rb
+      - brew test ./Formula/$FORMULA.rb
+  - stage: Audit
+    before_install:
+      - brew update >/dev/null
+    script:
+    - brew audit ./Formula/$FORMULA.rb

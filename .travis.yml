@@ -1,12 +1,13 @@
 os: osx
 language: ruby
-formula:
-- rvm
-- not-yet-created
+
+env:
+  - FORMULA=rvm
+  - FORMULA=not-yet-created
 
 before_install:
   - brew update >/dev/null
 script:
-  - brew audit ./Formula/*.rb
-  - brew install -v ./Formula/*.rb
-  - brew test ./Formula/*.rb
+  - brew install -v ./Formula/$FORMULA.rb
+  - brew test ./Formula/$FORMULA.rb
+  - brew audit ./Formula/$FORMULA.rb

@@ -1,12 +1,9 @@
 os: osx
 
-env:
-  - FORMULA=rvm
-  - FORMULA=not-yet-created
-
 before_install:
+  - sudo whoami
   - brew update >/dev/null
 script:
-  - brew install -v ./Formula/$FORMULA.rb
-  - brew test ./Formula/$FORMULA.rb
-  - brew audit ./Formula/$FORMULA.rb
+  - brew install -v ./Formula/*.rb
+  - brew test ./Formula/*.rb
+  - brew audit ./Formula/*.rb

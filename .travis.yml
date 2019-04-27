@@ -1,20 +1,19 @@
 os: osx
-language: ruby
 
 env:
   - FORMULA=rvm
   - FORMULA=not-yet-created
 
-
 jobs:
   include:
-  - stage: Install
+  - stage: Test
+    name: Install
     before_install:
       - brew update >/dev/null
     script:
       - brew install -v ./Formula/$FORMULA.rb
       - brew test ./Formula/$FORMULA.rb
-  - stage: Audit
+  - name: Audit
     before_install:
       - brew update >/dev/null
     script:

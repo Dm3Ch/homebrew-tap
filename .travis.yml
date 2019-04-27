@@ -1,4 +1,8 @@
 os: osx
+language: ruby
+formula:
+- rvm
+- not-yet-created
 
 before_install:
   - brew update >/dev/null

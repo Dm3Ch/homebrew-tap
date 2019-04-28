@@ -2,7 +2,6 @@ class Rvm < Formula
   desc "Manage multiple Ruby environments"
   homepage "https://rvm.io"
   url "https://github.com/rvm/rvm/archive/1.29.7.tar.gz"
-  mirror "https://bitbucket.org/mpapis/rvm/get/1.29.7.tar.gz"
   sha256 "48148248d964f1e6e54bb9b754dc4b93e658bc6b3223fcb5f3b219658f6772c6"
   head "https://github.com/rvm/rvm.git"
 

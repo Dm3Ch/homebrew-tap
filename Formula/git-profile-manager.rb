@@ -2,9 +2,9 @@
 class GitProfileManager < Formula
   desc "Allows to add and switch between multiple user profiles in your git repositories"
   homepage "https://github.com/Dm3Ch/git-profile-manager"
-  url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v0.0.1/git-profile-manager_0.0.1_MacOS_x86_64.tar.gz"
-  version "0.0.1"
-  sha256 "4bd2720555fac93dd14e0d9fbac27caa75a4534881f06366af3103a987cf4dd0"
+  url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v1.2.1/git-profile-manager_1.2.1_MacOS_x86_64.tar.gz"
+  version "1.2.1"
+  sha256 "c252e66fbe208f4f296297d60608b66267f256d9d927538496315d77c933db9d"
   
   head "https://github.com/Dm3Ch/git-profile-manager.git"
   

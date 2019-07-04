@@ -2,14 +2,14 @@
 class GitProfileManager < Formula
   desc "Allows to manage and switch between multiple git profiles"
   homepage "https://github.com/Dm3Ch/git-profile-manager"
-  version "2.0.0"
+  version "2.0.1"
 
   if OS.mac?
-    url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v2.0.0/git-profile-manager_2.0.0_MacOS_x86_64.tar.gz"
-    sha256 "53b227da659dc1e721c18a4871199535bde68f67ec08f9e797fec2acd3e13f30"
+    url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v2.0.1/git-profile-manager_2.0.1_MacOS_x86_64.tar.gz"
+    sha256 "f257e1653612de8f342298c62082c6aae97dcd6451a9338178c1b3c27bc8eb90"
   elsif OS.linux?
-    url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v2.0.0/git-profile-manager_2.0.0_Linux_x86_64.tar.gz"
-    sha256 "057b51ea32cf285addf0089197dc177de0ba78f7d0f6d3610c33632b483c72cd"
+    url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v2.0.1/git-profile-manager_2.0.1_Linux_x86_64.tar.gz"
+    sha256 "f1ec83c388db8ab57b69ee82665b6f6ce25053615319c8a556567df36631a343"
   end
   
   head "https://github.com/Dm3Ch/git-profile-manager.git"
@@ -17,14 +17,14 @@ class GitProfileManager < Formula
   depends_on "git"
 
   def install
+    ln_s "git-profile-manager", "git-profile"
+    bin.install "git-profile-manager"
+    bin.install "git-profile"
+    
     system "#{bin}/git-profile-manager completion bash > bash_completion.bash"
     system "#{bin}/git-profile-manager completion zsh > zsh_completion.zsh"
     bash_completion.install "bash_completion.bash"
     zsh_completion.install "zsh_completion.zsh"
-    
-    ln_s "#{bin}/git-profile-manager", "#{bin}/git-profile", false
-    bin.install "git-profile-manager"
-    bin.install "git-profile"
   end
 
   def caveats; <<~EOS

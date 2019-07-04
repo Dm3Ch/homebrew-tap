@@ -6,10 +6,10 @@ class GitProfileManager < Formula
 
   if OS.mac?
     url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v2.0.1/git-profile-manager_2.0.1_MacOS_x86_64.tar.gz"
-    sha256 "f257e1653612de8f342298c62082c6aae97dcd6451a9338178c1b3c27bc8eb90"
+    sha256 "28b47e190439176e2fedefa79cf411de558d99e7f0e8ee072f947938083bbad4"
   elsif OS.linux?
     url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v2.0.1/git-profile-manager_2.0.1_Linux_x86_64.tar.gz"
-    sha256 "f1ec83c388db8ab57b69ee82665b6f6ce25053615319c8a556567df36631a343"
+    sha256 "ce49587f97700778fc97cce8b676e2351a81a0ef4079b4ffd00c9742ca4dd0cd"
   end
   
   head "https://github.com/Dm3Ch/git-profile-manager.git"

@@ -2,14 +2,14 @@
 class GitProfileManager < Formula
   desc "Allows to manage and switch between multiple git profiles"
   homepage "https://github.com/Dm3Ch/git-profile-manager"
-  version "2.0.2"
+  version "2.0.3"
 
   if OS.mac?
-    url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v2.0.2/git-profile-manager_2.0.2_MacOS_x86_64.tar.gz"
-    sha256 "cbc672141d0e3ed184120db3efdb2f9c79ceadcb5b120cf18071470377362e2e"
+    url "https://github.com/dm3ch/git-profile-manager/releases/download/v2.0.3/git-profile-manager_2.0.3_MacOS_x86_64.tar.gz"
+    sha256 "92ec7c312dbfdb8b19a96dbaf764f1454ae293c10a4fa27e38b5b832d7120ea4"
   elsif OS.linux?
-    url "https://github.com/Dm3Ch/git-profile-manager/releases/download/v2.0.2/git-profile-manager_2.0.2_Linux_x86_64.tar.gz"
-    sha256 "2d5459378151b576162729392163233a60ac365d91942b3dda66d734c62cc8c6"
+    url "https://github.com/dm3ch/git-profile-manager/releases/download/v2.0.3/git-profile-manager_2.0.3_Linux_x86_64.tar.gz"
+    sha256 "232f749e815c8f19178fa6febe84887816c04d0bccc99a83e7189d70f3ecd331"
   end
   
   head "https://github.com/Dm3Ch/git-profile-manager.git"
